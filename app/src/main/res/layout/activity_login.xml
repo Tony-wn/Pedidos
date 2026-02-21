@@ -7,17 +7,11 @@
     android:padding="32dp"
     android:background="@color/primary">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="📦"
-        android:textSize="64sp"
-        android:layout_marginBottom="8dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pedidos App"
+        android:text="Iniciar sesión"
         android:textSize="28sp"
         android:textColor="@color/white"
         android:textStyle="bold"

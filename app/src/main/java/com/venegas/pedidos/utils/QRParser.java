@@ -2,18 +2,6 @@ package com.venegas.pedidos.utils;
 
 import java.util.HashMap;
 import java.util.Map;
-
-/**
- * QRParser — parsea el contenido de un código QR de cliente.
- *
- * Formato esperado:
- *   CLIENTE=Juan Perez|TEL=0999999999|DIR=Av. Central y Loja
- *
- * Las claves reconocidas son:
- *   CLIENTE  → nombre del cliente
- *   TEL      → teléfono
- *   DIR      → dirección o referencia
- */
 public class QRParser {
 
     public static class QRData {
@@ -23,13 +11,6 @@ public class QRParser {
         public boolean isValid;
         public String errorMessage;
     }
-
-    /**
-     * Parsea el contenido bruto del QR y devuelve un objeto QRData.
-     *
-     * @param rawContent contenido escaneado del QR
-     * @return QRData con los campos extraídos y el flag isValid
-     */
     public static QRData parse(String rawContent) {
         QRData data = new QRData();
 
@@ -39,7 +20,6 @@ public class QRParser {
             return data;
         }
 
-        // Separar por "|" para obtener pares clave=valor
         String[] parts = rawContent.split("\\|");
         Map<String, String> map = new HashMap<>();
 
@@ -52,7 +32,6 @@ public class QRParser {
             }
         }
 
-        // Extraer los campos conocidos
         data.clientName    = map.getOrDefault("CLIENTE", "");
         data.clientPhone   = map.getOrDefault("TEL", "");
         data.clientAddress = map.getOrDefault("DIR", "");
@@ -69,10 +48,6 @@ public class QRParser {
         return data;
     }
 
-    /**
-     * Valida si el contenido parece ser un QR de cliente válido
-     * (comprobación rápida antes de hacer el parse completo).
-     */
     public static boolean looksLikeClientQR(String rawContent) {
         return rawContent != null && rawContent.contains("CLIENTE=");
     }

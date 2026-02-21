@@ -9,23 +9,14 @@ import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 
-/**
- * Interfaz Retrofit que define los endpoints de la API.
- */
+
 public interface ApiService {
 
-    /**
-     * POST /auth/login
-     * Envía credenciales y recibe token de acceso.
-     */
+
     @POST("auth/login")
     Call<LoginResponse> login(@Body LoginRequest body);
 
-    /**
-     * POST /orders
-     * Envía un pedido con foto (multipart/form-data).
-     * Requiere Authorization: Bearer <token>
-     */
+
     @Multipart
     @POST("orders")
     Call<OrderResponse> createOrder(
@@ -39,10 +30,9 @@ public interface ApiService {
             @Part("longitude")     RequestBody longitude,
             @Part("localId")       RequestBody localId,
             @Part("createdAt")     RequestBody createdAt,
-            @Part MultipartBody.Part photo           // puede ser null
+            @Part MultipartBody.Part photo
     );
 
-    // ── Clases de Request/Response anidadas ──────────────────────────────────
 
     class LoginRequest {
         public String username;
