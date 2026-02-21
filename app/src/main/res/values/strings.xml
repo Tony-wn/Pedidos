@@ -1,3 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Pedidos</string>
+    <string name="app_name">Pedidos App</string>
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="hint_username">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_login">Ingresar</string>
+    <string name="btn_new_order">+ Nuevo Pedido</string>
+    <string name="btn_sync">Sincronizar Pedidos</string>
+    <string name="btn_read_qr">Leer QR del Cliente</string>
+    <string name="btn_take_photo">Tomar Fotografía</string>
+    <string name="btn_save_order">Guardar Pedido</string>
+    <string name="status_pending">Pendiente</string>
+    <string name="status_synced">Sincronizado</string>
+    <string name="status_error">Error</string>
+    <string name="no_orders">No hay pedidos registrados</string>
 </resources>

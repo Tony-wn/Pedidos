@@ -1,7 +1,9 @@
-package com.venegas.pedidos;
+package com.venegas.pedidos.activities;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.venegas.pedidos.R;
 
 public class MainActivity extends AppCompatActivity {
 
